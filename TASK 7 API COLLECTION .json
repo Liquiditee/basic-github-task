@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "d81699e2-fed2-46a9-88db-4a30342d5006",
+		"name": "API  collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29198709"
+	},
+	"item": [
+		{
+			"name": "https://api.postman.com/collections/3865219-8ed1a723-7194-4433-9aef-352e9b86d1e0?access_key=PMAT-01H40M7GCGGGYX7EFK4BFTRHZX",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code should be 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status code name should have an OK string\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"console.log(jsonData.collection.info)\r",
+							"\r",
+							"pm.test(\"_postman_id\", function () {\r",
+							"    pm.expect(jsonData.collection.info._postman_id).to.eql(\"8ed1a723-7194-4433-9aef-352e9b86d1e0\");\r",
+							"});\r",
+							"pm.test(\"name\", function () {\r",
+							"    pm.expect(jsonData.collection.info.name).to.eql(\"STSTStudentCourse\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"schema\", function () {\r",
+							"    pm.expect(jsonData.collection.info.schema).to.eql(\"https://schema.getpostman.com/json/collection/v2.1.0/collection.json\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"updatedAt\", function () {\r",
+							"    pm.expect(jsonData.collection.info.updatedAt).to.eql(\"2023-06-28T09:08:14.000Z\");\r",
+							"});\r",
+							"pm.test(\"uid\", function () {\r",
+							"    pm.expect(jsonData.collection.info.uid).to.eql(\"3865219-8ed1a723-7194-4433-9aef-352e9b86d1e0\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"collection\");\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"info\");\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"name\");\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"_postman_id\");\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"schema\");\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"updatedAt\");\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"uid\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.postman.com/collections/3865219-8ed1a723-7194-4433-9aef-352e9b86d1e0?access_key=PMAT-01H40M7GCGGGYX7EFK4BFTRHZX",
+					"protocol": "https",
+					"host": [
+						"api",
+						"postman",
+						"com"
+					],
+					"path": [
+						"collections",
+						"3865219-8ed1a723-7194-4433-9aef-352e9b86d1e0"
+					],
+					"query": [
+						{
+							"key": "access_key",
+							"value": "PMAT-01H40M7GCGGGYX7EFK4BFTRHZX"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
